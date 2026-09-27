@@ -33,7 +33,7 @@ a token that has `read:packages`:
 <repositories>
     <repository>
         <id>github</id>
-        <url>https://maven.pkg.github.com/ahincho/nova-java-spring-boot-parent</url>
+        <url>https://maven.pkg.github.com/ahincho/nova-java-14-spring-boot-parent</url>
     </repository>
 </repositories>
 ```
@@ -41,11 +41,11 @@ a token that has `read:packages`:
 ## Starting from scratch
 
 Do not hand-write the POM — generate the project:
-[nova-java-spring-boot-archetype](https://github.com/ahincho/nova-java-spring-boot-archetype).
+[nova-java-spring-boot-archetype](https://github.com/ahincho/nova-java-17-spring-boot-archetype).
 
 ## The Gradle equivalent
 
-[nova-java-spring-boot-gradle-plugin](https://github.com/ahincho/nova-java-spring-boot-gradle-plugin)
+[nova-java-spring-boot-gradle-plugin](https://github.com/ahincho/nova-java-16-spring-boot-gradle-plugin)
 carries the same conventions as a convention plugin.
 
 ## License

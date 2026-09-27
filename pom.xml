@@ -37,11 +37,11 @@
     <repositories>
         <repository>
             <id>nova-packages-read-bom</id>
-            <url>https://maven.pkg.github.com/ahincho/nova-bom</url>
+            <url>https://maven.pkg.github.com/ahincho/nova-java-13-bom</url>
         </repository>
         <repository>
             <id>nova-packages-read-starter</id>
-            <url>https://maven.pkg.github.com/ahincho/nova-java-spring-boot-starter</url>
+            <url>https://maven.pkg.github.com/ahincho/nova-java-12-spring-boot-starter</url>
         </repository>
     </repositories>
 
@@ -111,7 +111,7 @@
     <distributionManagement>
         <repository>
             <id>github</id>
-            <url>https://maven.pkg.github.com/ahincho/nova-java-spring-boot-parent</url>
+            <url>https://maven.pkg.github.com/ahincho/nova-java-14-spring-boot-parent</url>
         </repository>
     </distributionManagement>
 

@@ -1,7 +1,7 @@
 name: Publish Parent POM
 
 # Manually triggered publish for nova-spring-boot-parent. The reusable
-# workflow ahincho/nova-devops/.github/workflows/reusable-publish-maven.yml@main
+# workflow ahincho/nova-shared-02-pipelines/.github/workflows/reusable-publish-maven.yml@main
 # has a gap: it doesn't forward a cross-repo read token to nova-setup-java,
 # causing 401 Unauthorized when reading nova-spring-boot-bom from the
 # nova-bom repo's GitHub Packages. This workflow inlines that logic so
@@ -30,7 +30,7 @@ jobs:
           fetch-depth: 0
 
       - name: Nova Setup Java (cross-repo reads via NOVA_PACKAGES_READ_TOKEN)
-        uses: ahincho/nova-devops/.github/actions/nova-setup-java@main
+        uses: ahincho/nova-shared-02-pipelines/.github/actions/nova-setup-java@main
         with:
           java-version: '25'
           build-tool: maven
