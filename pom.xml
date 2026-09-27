@@ -6,7 +6,7 @@
 
     <groupId>pe.edu.nova.java</groupId>
     <artifactId>nova-spring-boot-parent</artifactId>
-    <version>1.0.0</version>
+    <version>2.0.0</version>
     <packaging>pom</packaging>
 
     <name>Nova Platform Spring Boot Parent</name>
@@ -19,12 +19,12 @@
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <!-- Nova Platform -->
-        <nova-bom.version>1.0.0</nova-bom.version>
-        <nova-starter.version>1.0.1</nova-starter.version>
+        <nova-bom.version>2.0.1</nova-bom.version>
+        <nova-starter.version>1.0.4</nova-starter.version>
         <!-- Plugins -->
         <maven-compiler-plugin.version>3.14.0</maven-compiler-plugin.version>
         <maven-surefire-plugin.version>3.5.3</maven-surefire-plugin.version>
-        <spring-boot-maven-plugin.version>4.0.5</spring-boot-maven-plugin.version>
+        <spring-boot-maven-plugin.version>4.0.8</spring-boot-maven-plugin.version>
     </properties>
 
     <!-- Repositorios de lectura — GitHub Packages de otros repos Nova.

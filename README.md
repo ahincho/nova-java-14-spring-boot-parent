@@ -11,10 +11,16 @@ POM declares what it *is*, not how it builds.
 |---|---|
 | Java | 25, source and target |
 | Encoding | UTF-8 |
-| Nova BOM | `nova-bom` 1.0.0 |
-| Nova starter | `nova-spring-boot-starter` 1.0.1 |
+| Nova BOM | `nova-spring-boot-bom` 2.0.1 |
+| Nova starter | `nova-spring-boot-starter` 1.0.4 |
 | Test | `spring-boot-starter-test` |
-| Plugins | `maven-compiler-plugin` 3.14.0, `maven-surefire-plugin` 3.5.3, `spring-boot-maven-plugin` 4.0.5 |
+| Plugins | `maven-compiler-plugin` 3.14.0, `maven-surefire-plugin` 3.5.3, `spring-boot-maven-plugin` 4.0.8 |
+
+2.0.0 inherits the BOM family with the
+[ADR-039](https://github.com/ahincho/nova-shared-01-docs/blob/main/adrs/shared/ADR-039-nombres-de-artefacto-derivados-del-repositorio.md)
+names: the starters are `nova-*-spring-boot-starter`, and the 1.0.x names
+(`nova-api-standard-starter`, `nova-mask-starter`, `nova-observability-starter`)
+are no longer managed. A child that declares one of them has to move to the new name.
 
 ## Use
 
@@ -22,7 +28,7 @@ POM declares what it *is*, not how it builds.
 <parent>
     <groupId>pe.edu.nova.java</groupId>
     <artifactId>nova-spring-boot-parent</artifactId>
-    <version>1.0.0</version>
+    <version>2.0.0</version>
 </parent>
 ```
 
@@ -41,11 +47,11 @@ a token that has `read:packages`:
 ## Starting from scratch
 
 Do not hand-write the POM — generate the project:
-[nova-java-spring-boot-archetype](https://github.com/ahincho/nova-java-17-spring-boot-archetype).
+[nova-java-17-spring-boot-archetype](https://github.com/ahincho/nova-java-17-spring-boot-archetype).
 
 ## The Gradle equivalent
 
-[nova-java-spring-boot-gradle-plugin](https://github.com/ahincho/nova-java-16-spring-boot-gradle-plugin)
+[nova-java-16-spring-boot-gradle-plugin](https://github.com/ahincho/nova-java-16-spring-boot-gradle-plugin)
 carries the same conventions as a convention plugin.
 
 ## License

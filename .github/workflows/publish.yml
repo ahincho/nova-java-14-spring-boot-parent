@@ -87,3 +87,21 @@ jobs:
           else
             mvn deploy -DskipTests
           fi
+
+      - name: Read the published version
+        id: version
+        if: inputs.dry-run != 'true'
+        run: |
+          version=$(python3 -c "import xml.etree.ElementTree as E; print(E.parse('pom.xml').getroot().find('{http://maven.apache.org/POM/4.0.0}version').text)")
+          echo "version=${version}" >> "$GITHUB_OUTPUT"
+
+      # Un deploy en verde no prueba que el POM se pueda descargar (ADR-039, regla 6).
+      - name: Verify the publication can be downloaded
+        if: inputs.dry-run != 'true'
+        uses: ahincho/nova-shared-02-pipelines/.github/actions/nova-verify-publication@main
+        with:
+          group-id: pe.edu.nova.java
+          artifact-ids: nova-spring-boot-parent
+          version: ${{ steps.version.outputs.version }}
+          extensions: pom
+          token: ${{ github.token }}
