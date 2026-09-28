@@ -11,7 +11,7 @@ POM declares what it *is*, not how it builds.
 |---|---|
 | Java | 25, source and target |
 | Encoding | UTF-8 |
-| Nova BOM | `nova-spring-boot-bom` 2.0.1 |
+| Nova BOM | `nova-spring-boot-bom` 2.0.2 |
 | Nova starter | `nova-spring-boot-starter` 1.0.4 |
 | Test | `spring-boot-starter-test` |
 | Plugins | `maven-compiler-plugin` 3.14.0, `maven-surefire-plugin` 3.5.3, `spring-boot-maven-plugin` 4.0.8 |
@@ -28,7 +28,7 @@ are no longer managed. A child that declares one of them has to move to the new 
 <parent>
     <groupId>pe.edu.nova.java</groupId>
     <artifactId>nova-spring-boot-parent</artifactId>
-    <version>2.0.0</version>
+    <version>2.0.1</version>
 </parent>
 ```
 
